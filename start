@@ -1,0 +1,7 @@
+#!/bin/sh
+if [[ $(sudo steamos-devmode status) = "disabled" ]]
+then
+    sudo steamos-devmode enable --no-prompt
+fi
+sudo pacman -S --needed jre21-openjdk
+java -jar -Xms4G paper.jar

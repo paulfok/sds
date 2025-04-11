@@ -4,4 +4,4 @@ then
     sudo steamos-devmode enable --no-prompt
 fi
 sudo pacman -S --needed jre21-openjdk
-java -jar -Xms4G paper.jar
+java -jar -Xmx4G paper.jar

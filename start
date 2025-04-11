@@ -6,5 +6,5 @@ fi
 sudo pacman -S --needed jre21-openjdk miniupnpc
 upnpc -d 25565 tcp
 upnpc -r 25565 tcp
-java -jar -Xmx4G paper.jar
+java -jar -Xms4G paper.jar
 upnpc -d 25565 tcp

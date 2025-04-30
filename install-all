@@ -1,0 +1,12 @@
+#!/bin/sh
+if [[ $(sudo steamos-devmode status) = "disabled" ]]
+then
+    sudo steamos-devmode enable --no-prompt
+fi
+sudo pacman -Sy --needed prismlauncher jre21-openjdk fakeroot debugedit
+cd /tmp
+sudo rm -rf zen-browser-bin
+git clone https://aur.archlinux.org/zen-browser-bin.git
+cd zen-browser-bin
+sudo rm -rf /opt/zen-browser-bin
+makepkg -si

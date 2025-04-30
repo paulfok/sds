@@ -3,7 +3,7 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -S --needed jre21-openjdk miniupnpc
+sudo pacman -Sy --needed jre21-openjdk miniupnpc
 upnpc -d 25565 tcp
 upnpc -r 25565 tcp
 java -jar -Xms4G paper.jar

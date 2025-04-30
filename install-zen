@@ -3,7 +3,7 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -S --needed fakeroot debugedit
+sudo pacman -Sy --needed fakeroot debugedit
 cd /tmp
 git clone https://aur.archlinux.org/zen-browser-bin.git
 cd zen-browser-bin

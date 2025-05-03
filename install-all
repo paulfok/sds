@@ -3,7 +3,7 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -Sy --needed prismlauncher jre21-openjdk fakeroot debugedit hyprland wofi waybar kitty archlinux-xdg-menu nwg-look hyprlock
+sudo pacman -Sy --needed prismlauncher jre21-openjdk fakeroot debugedit hyprland wofi waybar kitty archlinux-xdg-menu nwg-look hyprlock hypridle
 cd /tmp
 sudo rm -rf zen-browser-bin
 git clone https://aur.archlinux.org/zen-browser-bin.git

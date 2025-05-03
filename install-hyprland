@@ -3,4 +3,4 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -Sy --needed hyprland wofi waybar kitty archlinux-xdg-menu nwg-look hyprlock
+sudo pacman -Sy --needed hyprland wofi waybar kitty archlinux-xdg-menu nwg-look hyprlock hypridle

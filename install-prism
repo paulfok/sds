@@ -3,4 +3,4 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -Sy --needed prismlauncher jre21-openjdk
+sudo pacman -Sy --noconfirm prismlauncher jre21-openjdk

@@ -3,4 +3,13 @@ if [[ $(sudo steamos-devmode status) = "disabled" ]]
 then
     sudo steamos-devmode enable --no-prompt
 fi
-sudo pacman -Sy --needed hyprland wofi waybar kitty archlinux-xdg-menu nwg-look hyprlock hypridle neofetch lolcat swaync
+
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo chown deck /etc/pacman.conf
+echo '[chaotic-aur]' >> /etc/pacman.conf
+echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
+
+sudo pacman -Sy --noconfirm hyprland fuzzel kitty archlinux-xdg-menu nwg-look hyprlock hypridle neofetch lolcat swaync eww pamixer

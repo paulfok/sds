@@ -12,4 +12,4 @@ sudo chown deck /etc/pacman.conf
 echo '[chaotic-aur]' >> /etc/pacman.conf
 echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
 sudo rm -rf /opt/zen-browser-bin
-sudo pacman -Sy --noconfirm prismlauncher jre21-openjdk neofetch lolcat zen-browser-bin
+sudo pacman -Sy --noconfirm prismlauncher jre21-openjdk neofetch lolcat zen-browser-bin samba
